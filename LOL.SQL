@@ -43,3 +43,36 @@ Create Table Allergies (
     Patient INT,
     FOREIGN KEY (Patient) REFERENCES (PatientId)
 );
+
+Create Table Invoices (
+    InvoiceID INT PRIMARY KEY,
+    Patient INT,
+    Visit INT,
+    IssueDate DATE,
+    DueDate DATE,
+    Status ENUM ('Draft', 'Issued', 'Paid', 'Partial', 'Overdue', 'Cancelled', 'Refunded', 'Uncollectible'),
+    FOREIGN KEY (Patient) REFERENCES Patient(PatientId)
+    -- FOREIGN KEY (Visit) REFERENCES 
+);
+
+Create Table InvoicesItems (
+    ItemID INT PRIMARY KEY,
+    Invoice INT,
+    Code TEXT,
+    Descriptions TEXT,
+    LineTotal INT,
+    Cost INT,
+    Quantity INT,
+    FOREIGN KEY (Invoice) REFERENCES Invoices(InvoiceID)
+);
+
+Create Table Payments (
+    PaymentID INT PRIMARY KEY,
+    Invoice INT,
+    Source TEXT,
+    Method ENUM('Cash', 'Debit/Credit', 'Check', 'Digital Wallet', 'Electronic Transfer', 'Payment Platform'),
+    Amount INT,
+    RecieveTime Time,
+    referenceNO INT,
+    FOREIGN KEY (Invoice) REFERENCES Invoices(InvoiceID)
+);
