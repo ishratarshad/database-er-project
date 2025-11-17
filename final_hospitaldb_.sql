@@ -289,11 +289,11 @@ VALUES
 INSERT INTO PAYMENT
 (PaymentID, InvoiceID, Source, Method, Amount, ReceivedTime, ReferenceNo)
 VALUES
-(9001, 7002, 'Patient',      'Debit/Credit',       180.00, '2025-11-05 15:30:00', 'PAY-2025-7002-1'),
-(9002, 7001, 'Insurance',    'Electronic Transfer',150.00, '2025-11-06 10:15:00', 'PAY-2025-7001-1'),
-(9003, 7001, 'Patient',      'Cash',                50.00, '2025-11-07 09:45:00', 'PAY-2025-7001-2'),
-(9004, 7003, 'Patient',      'Payment Platform',   120.00, '2025-11-08 11:20:00', 'PAY-2025-7003-1'),
-(9005, 7004, 'Patient',      'Digital Wallet',      80.00, '2025-11-11 14:00:00', 'PAY-2025-7004-1');
+(9001, 7002, 201, 'Patient',      'Debit/Credit',       180.00, '2025-11-05 15:30:00', 'PAY-2025-7002-1'),
+(9002, 7001, 202, 'Insurance',    'Electronic Transfer',150.00, '2025-11-06 10:15:00', 'PAY-2025-7001-1'),
+(9003, 7001, 203, 'Patient',      'Cash',                50.00, '2025-11-07 09:45:00', 'PAY-2025-7001-2'),
+(9004, 7003, 204, 'Patient',      'Payment Platform',   120.00, '2025-11-08 11:20:00', 'PAY-2025-7003-1'),
+(9005, 7004, 205, 'Patient',      'Digital Wallet',      80.00, '2025-11-11 14:00:00', 'PAY-2025-7004-1');
 
 -- insurance policy rows
 INSERT INTO INSURANCEPOLICY
