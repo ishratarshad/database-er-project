@@ -138,6 +138,7 @@ CREATE TABLE INVOICEITEM (
 CREATE TABLE PAYMENT (
     PaymentID INT PRIMARY KEY,
     InvoiceID INT,
+    PatientID INT,
     Source VARCHAR(50),
     Method ENUM(
         'Cash','Debit/Credit','Check','Digital Wallet',
@@ -146,7 +147,8 @@ CREATE TABLE PAYMENT (
     Amount DECIMAL(10,2),
     ReceivedTime DATETIME,
     ReferenceNo VARCHAR(50),
-    FOREIGN KEY (InvoiceID) REFERENCES INVOICE(InvoiceID)
+    FOREIGN KEY (InvoiceID) REFERENCES INVOICE(InvoiceID),
+    FOREIGN KEY (PatientID) REFERENCES PATIENT(PatientID)
 );
 
 -- insurance policy table

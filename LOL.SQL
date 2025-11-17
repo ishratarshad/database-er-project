@@ -55,7 +55,7 @@ Create Table Invoices (
     -- FOREIGN KEY (Visit) REFERENCES 
 );
 
-Create Table InvoicesItems (
+Create Table InvoiceItems (
     ItemID INT PRIMARY KEY,
     Invoice INT,
     Code TEXT,
