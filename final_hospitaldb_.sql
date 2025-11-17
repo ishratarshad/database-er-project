@@ -287,7 +287,7 @@ VALUES
 
 -- payment rows
 INSERT INTO PAYMENT
-(PaymentID, InvoiceID, Source, Method, Amount, ReceivedTime, ReferenceNo)
+(PaymentID, InvoiceID, PatientID, Source, Method, Amount, ReceivedTime, ReferenceNo)
 VALUES
 (9001, 7002, 201, 'Patient',      'Debit/Credit',       180.00, '2025-11-05 15:30:00', 'PAY-2025-7002-1'),
 (9002, 7001, 202, 'Insurance',    'Electronic Transfer',150.00, '2025-11-06 10:15:00', 'PAY-2025-7001-1'),
